@@ -1,0 +1,41 @@
+package intro;
+
+public class Task3 {
+
+	public static void main(String[] args) {
+		
+		int number1 = 1;
+		int number2 = 1;
+		
+		
+		int sum1=0, sum2=0;
+		
+		while(true) {
+			
+			for(int i = 1; i<number1; i++) {
+				if(number1%i==0) {
+					sum1+=i;
+				}
+			}
+			
+			for(number2 = 1; number2<sum1 ; number2++) {
+				
+					if(sum1%number2==0) {
+						sum2+=number2;
+					}
+				
+			}
+			
+			if(sum2 == number1 && sum1 != sum2) {
+				break;
+			}
+			
+			number1++;
+			sum1=0;
+			sum2=0;
+		}
+		System.out.println(sum1+ "\n"+ sum2);
+
+	}
+
+}

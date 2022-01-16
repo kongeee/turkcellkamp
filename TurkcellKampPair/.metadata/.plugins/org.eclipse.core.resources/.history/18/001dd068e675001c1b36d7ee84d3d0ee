@@ -1,0 +1,41 @@
+package intro;
+
+public class Task3 {
+
+	public static void main(String[] args) {
+		
+		int sayac=1;
+        int sum1=0;
+        int sum2=0;
+        while(true) 
+        {
+            for(int i=1; i<sayac; i++) 
+            {
+                if(sayac%i==0)
+                {
+                    sum1+=i;
+                }
+            }
+            if(sayac!=sum1) 
+            {
+                for(int i=1;i<sum1;i++)
+                {
+                    if(sum1%i==0)
+                    {
+                        sum2+=i;
+                    }
+                }
+                if(sayac==sum2)
+                {
+                    System.out.println(sayac);
+                    System.out.println(sum1);
+                    break;
+                }
+            }
+            sayac++;
+            sum1=0;
+            sum2=0;
+        }
+	}
+
+}
