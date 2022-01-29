@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+encoding//src/nLayeredApp/business/concretes/ProductManager.java=UTF-8
+encoding//src/nLayeredApp/dataAccess/concretes/hibernateImpls/HibernateProductDao.java=UTF-8
