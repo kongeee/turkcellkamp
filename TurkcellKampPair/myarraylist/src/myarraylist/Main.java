@@ -1,5 +1,6 @@
 package myarraylist;
 
+import java.util.ArrayList;
 
 public class Main {
 
@@ -21,6 +22,7 @@ public class Main {
 		}
 		
 		System.out.println("Size of the MyArrayList is " + myArrayList.size());
+		
 		
 
 	}
