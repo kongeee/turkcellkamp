@@ -1,0 +1,40 @@
+--kategori ismini getir
+
+select category_name, count(*) adet 
+from products p inner join categories c
+on p.category_id=c.category_id
+group by category_name
+having count(*)<10
+
+--totalde en cok para kazandıran ürün hangisi
+
+select product_id, sum(unit_price*quantity)
+from order_details
+group by product_id
+order by sum desc limit 1
+
+select sum(unit_price*quantity) from order_details
+where product_id=38
+
+--en cok satıs yapan personel hangisi
+
+select employee_id, count(*) adet from orders
+group by employee_id
+order by adet desc limit 1
+
+
+--hic satıs yapamayan personel kim
+
+select e.first_name
+from employees e left join orders od
+on e.employee_id = od.employee_id
+where od.employee_id is null
+
+--hangi kategoride kaç para kazandık
+
+select c.category_id, sum(od.unit_price*od.quantity)
+from products p inner join categories c
+on p.category_id=c.category_id inner join order_details od 
+on p.product_id=od.product_id
+group by c.category_id
+
