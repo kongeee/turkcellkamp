@@ -1,0 +1,5 @@
+package com.turkcell.northwind.entities.concretes;
+
+public class Product {
+
+}

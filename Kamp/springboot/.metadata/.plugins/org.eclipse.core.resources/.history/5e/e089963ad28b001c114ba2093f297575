@@ -1,0 +1,5 @@
+package com.turkcell.northwind.business.dtos;
+
+public class ProductListDto {
+
+}
