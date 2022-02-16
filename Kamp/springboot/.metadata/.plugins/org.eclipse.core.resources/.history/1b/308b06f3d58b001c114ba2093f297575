@@ -1,5 +1,0 @@
-package com.turkcell.northwind.business.requests;
-
-public class CreateProductRequest {
-
-}

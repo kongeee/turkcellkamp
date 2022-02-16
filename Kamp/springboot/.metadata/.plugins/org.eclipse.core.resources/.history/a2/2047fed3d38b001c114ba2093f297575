@@ -1,5 +1,0 @@
-package com.turkcell.northwind.core.utilities.mapping;
-
-public class ModelMapperManager {
-
-}

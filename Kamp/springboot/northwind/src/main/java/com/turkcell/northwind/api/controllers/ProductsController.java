@@ -2,7 +2,7 @@ package com.turkcell.northwind.api.controllers;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.turkcell.northwind.business.abstracts.ProductService;
 import com.turkcell.northwind.business.dtos.ProductListDto;
 import com.turkcell.northwind.business.requests.CreateProductRequest;
-import com.turkcell.northwind.entities.concretes.Product;
+
 
 
 

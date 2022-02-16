@@ -19,7 +19,7 @@ public class ModelMapperManager implements ModelMapperService {
 	
 	@Override
 	public ModelMapper forDto() {
-		//elemenları isimlerine göre eşleştirir (sadece eşleştirebildikleri)
+		//elemanları isimlerine göre eşleştirir (sadece eşleştirebildikleri)
 		this.modelMapper.getConfiguration().setAmbiguityIgnored(true).setMatchingStrategy(MatchingStrategies.LOOSE);
 		return modelMapper;
 	}
@@ -28,7 +28,7 @@ public class ModelMapperManager implements ModelMapperService {
 	
 	@Override
 	public ModelMapper forRequest() {
-		//elemenları isimlerine göre eşleştirir (eşleştirilmek istenen elemenaların tam oalrak eşlenmesi gerekiyor)
+		//elemanları isimlerine göre eşleştirir (eşleştirilmek istenen elemenaların tam oalrak eşlenmesi gerekiyor)
 		this.modelMapper.getConfiguration().setAmbiguityIgnored(true).setMatchingStrategy(MatchingStrategies.STANDARD);
 		return modelMapper;
 	}

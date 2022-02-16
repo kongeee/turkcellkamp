@@ -7,10 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateProductRequest {
-	private String productName;
-	private double unitPrice;
-	private String quantityPerUnit;
-	private int unitsInStock;
+public class CreateCategoryRequest {
 	private int categoryId;
+	private String categoryName;
 }

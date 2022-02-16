@@ -1,9 +1,0 @@
-package com.turkcell.northwind.entities.concretes;
-
-public class Product {
-	private int productId;
-	private int productName;
-	private double unitPrice;
-	private String quantityPerUnit;
-	private int unitsInStock;
-}

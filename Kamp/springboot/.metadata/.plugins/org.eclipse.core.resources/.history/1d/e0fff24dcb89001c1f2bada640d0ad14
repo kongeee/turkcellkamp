@@ -1,5 +1,0 @@
-package com.turkcell.northwind.dataAccess.abstracts;
-
-public interface ProductDao {
-
-}

@@ -1,5 +1,7 @@
 package com.turkcell.northwind.business.dtos;
 
+import com.turkcell.northwind.entities.concretes.Category;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,5 +16,6 @@ public class ProductListDto {
 	private double unitPrice;
 	private String quantityPerUnit;
 	private int unitsInStock;
+	private String categoryName;
 
 }

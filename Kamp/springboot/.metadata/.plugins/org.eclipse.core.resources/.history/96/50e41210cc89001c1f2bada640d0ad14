@@ -1,5 +1,0 @@
-package com.turkcell.northwind.business.concretes;
-
-public class ProductManager {
-
-}
