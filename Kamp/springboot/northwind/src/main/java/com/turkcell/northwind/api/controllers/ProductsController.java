@@ -41,17 +41,17 @@ public class ProductsController {
 	}
 	
 	@GetMapping("/getByProductName")
-	DataResult<ProductByNameDto> getByProductName(String productName){
+	public DataResult<ProductByNameDto> getByProductName(String productName){
 		return this.productService.getByProductName(productName);
 	}
 	
 	@GetMapping("/getAllPaged")
-	DataResult<List<ProductListDto>> getAllPaged(int pageNo, int pageSize){
+	public DataResult<List<ProductListDto>> getAllPaged(int pageNo, int pageSize){
 		return this.productService.getAllPaged(pageNo, pageSize);
 	}
 	
 	@GetMapping("/getAllSorted")
-	DataResult<List<ProductListDto>> getAllSorted(){
+	public DataResult<List<ProductListDto>> getAllSorted(){
 		return this.productService.getAllSorted();
 	}
 }
