@@ -11,6 +11,10 @@ import com.turkcell.northwind.business.dtos.CategoryListDto;
 
 import com.turkcell.northwind.business.requests.CreateCategoryRequest;
 import com.turkcell.northwind.core.utilities.mapping.ModelMapperService;
+import com.turkcell.northwind.core.utilities.results.DataResult;
+import com.turkcell.northwind.core.utilities.results.Result;
+import com.turkcell.northwind.core.utilities.results.SuccessDataResult;
+import com.turkcell.northwind.core.utilities.results.SuccessResult;
 import com.turkcell.northwind.dataAccess.abstracts.CategoryDao;
 import com.turkcell.northwind.entities.concretes.Category;
 
@@ -30,7 +34,7 @@ public class CategoryManager implements CategoryService {
 	}
 
 	@Override
-	public List<CategoryListDto> getAll() {
+	public DataResult<List<CategoryListDto>>getAll() {
 		
 		List<Category> result = this.categoryDao.findAll();
 		
@@ -38,15 +42,15 @@ public class CategoryManager implements CategoryService {
 				.map(category->this.modelMapperService.forDto().map(category, CategoryListDto.class))
 				.collect(Collectors.toList());
 		
-		return response;
+		return new SuccessDataResult<List<CategoryListDto>>(response, "categories listed");
 	}
 
 	@Override
-	public void add(CreateCategoryRequest createCategoryRequest) {
+	public Result add(CreateCategoryRequest createCategoryRequest) {
 		Category category = this.modelMapperService.forRequest()
 				.map(createCategoryRequest, Category.class);
 		this.categoryDao.save(category);
-		
+		return new SuccessResult("category added");
 	}
 
 }

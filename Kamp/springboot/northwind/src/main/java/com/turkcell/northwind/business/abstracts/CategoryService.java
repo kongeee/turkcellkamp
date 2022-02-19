@@ -4,9 +4,12 @@ import java.util.List;
 
 import com.turkcell.northwind.business.dtos.CategoryListDto;
 import com.turkcell.northwind.business.requests.CreateCategoryRequest;
+import com.turkcell.northwind.core.utilities.results.DataResult;
+import com.turkcell.northwind.core.utilities.results.Result;
+
 
 
 public interface CategoryService {
-	List<CategoryListDto> getAll();
-	void add(CreateCategoryRequest createCategoryRequest);
+	DataResult<List<CategoryListDto>> getAll();
+	Result add(CreateCategoryRequest createCategoryRequest);
 }

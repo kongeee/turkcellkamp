@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.turkcell.northwind.business.abstracts.CategoryService;
 import com.turkcell.northwind.business.dtos.CategoryListDto;
 import com.turkcell.northwind.business.requests.CreateCategoryRequest;
+import com.turkcell.northwind.core.utilities.results.DataResult;
+import com.turkcell.northwind.core.utilities.results.Result;
 
 @RestController
 @RequestMapping("/api/categories") 
@@ -24,12 +26,12 @@ public class CategoriesController {
 	}
 	
 	@GetMapping("/getall")
-	public List<CategoryListDto> getAll(){
+	public DataResult<List<CategoryListDto>> getAll(){
 		return this.categoryService.getAll();
 	}
 	
 	@PostMapping("/add")
-	public void add(@RequestBody CreateCategoryRequest createCategoryRequest) { 
-		this.categoryService.add(createCategoryRequest);
+	public Result add(@RequestBody CreateCategoryRequest createCategoryRequest) { 
+		return this.categoryService.add(createCategoryRequest);
 	}//
 }
