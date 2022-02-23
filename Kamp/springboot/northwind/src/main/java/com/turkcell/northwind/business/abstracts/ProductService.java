@@ -15,5 +15,5 @@ public interface ProductService {
 	Result add(CreateProductRequest createProductRequest);
 	DataResult<ProductByNameDto> getByProductName(String productName);
 	DataResult<List<ProductListDto>> getAllPaged(int pageNo, int pageSize); //sayfali getir
-	DataResult<List<ProductListDto>> getAllSorted();
+	DataResult<List<ProductListDto>> getAllSorted(); 
 }

@@ -1,6 +1,5 @@
 package com.turkcell.northwind.business.dtos;
 
-import com.turkcell.northwind.entities.concretes.Category;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -12,6 +12,6 @@ public class ProductByNameDto {
 	private String productName;
 	private double unitPrice;
 	private String quantityPerUnit;
-	private int unitsInStock;
+	private int unitsInStock; 
 	private String categoryName;
 }

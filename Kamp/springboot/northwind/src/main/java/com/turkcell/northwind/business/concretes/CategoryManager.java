@@ -24,7 +24,7 @@ import com.turkcell.northwind.entities.concretes.Category;
 public class CategoryManager implements CategoryService {
 
 	private CategoryDao categoryDao;
-	private ModelMapperService modelMapperService;
+	private ModelMapperService modelMapperService; 
 	
 	@Autowired
 	public CategoryManager(CategoryDao categoryDao, ModelMapperService modelMapperService) {

@@ -11,5 +11,5 @@ import com.turkcell.northwind.core.utilities.results.Result;
 
 public interface CategoryService {
 	DataResult<List<CategoryListDto>> getAll();
-	Result add(CreateCategoryRequest createCategoryRequest);
+	Result add(CreateCategoryRequest createCategoryRequest); 
 }

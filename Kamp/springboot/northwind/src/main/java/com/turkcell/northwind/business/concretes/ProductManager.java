@@ -26,7 +26,7 @@ import com.turkcell.northwind.entities.concretes.Product;
 public class ProductManager implements ProductService {
 	
 	private ProductDao productDao;
-	private ModelMapperService modelMapperService;
+	private ModelMapperService modelMapperService; 
 	
 	//aşağıdaki satır productdao nun concrete bir sınıfını, productdao ya bağlar
 	@Autowired 
