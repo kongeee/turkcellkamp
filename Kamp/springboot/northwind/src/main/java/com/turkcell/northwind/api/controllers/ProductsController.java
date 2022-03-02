@@ -2,6 +2,7 @@ package com.turkcell.northwind.api.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,7 +37,7 @@ public class ProductsController {
 	}
 	
 	@PostMapping("/add")
-	public Result add(@RequestBody CreateProductRequest createProductRequest) { //RequestBody -> 
+	public Result add(@RequestBody @Valid CreateProductRequest createProductRequest) { //@Valid -> validasyonları çalıştırır
 		return this.productService.add(createProductRequest);
 	}
 	
