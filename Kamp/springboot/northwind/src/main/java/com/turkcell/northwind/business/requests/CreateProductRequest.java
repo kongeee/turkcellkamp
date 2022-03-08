@@ -30,4 +30,6 @@ public class CreateProductRequest {
 	@Min(1)
 	private int unitsInStock;
 	
+	private int categoryId;
+	
 }
