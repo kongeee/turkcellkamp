@@ -21,7 +21,7 @@ import com.turkcell.northwind.core.utilities.results.Result;
 
 
 @RestController
-@RequestMapping("/api/products") //endpoint
+@RequestMapping("/api/products") 
 public class ProductsController {
 	private ProductService productService;
 	
